@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `registry`.`clients` (
 -- Table `registry`.`orders`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `registry`.`orders` (
-  `id` BIGINT NOT NULL,
+  `id` BIGINT NOT NULL AUTO_INCREMENT,
   `cafe_id` BIGINT NOT NULL,
   `client_id` BIGINT NOT NULL,
   `bill` DOUBLE NOT NULL,
