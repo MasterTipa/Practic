@@ -1,3 +1,4 @@
+import by.maksimka.registry.controller.BasketController;
 import by.maksimka.registry.controller.ClientControl;
 
 import java.sql.SQLException;
@@ -9,6 +10,7 @@ public class Main {
         Input input = new Input();
         Output output = new Output();
         ClientControl clientControl = new ClientControl();
+        BasketController basketController = new BasketController();
         output.FirstMessage();
         int answer = input.FirstMessage();
         System.out.printf("Your numbers: %d\n",answer);
@@ -24,7 +26,7 @@ public class Main {
                 clientControl.getAllClients();
                 break;
             case 4:
-                clientControl.uppdateClient(1, 666);
+                clientControl.updateClient(1, 666);
                 clientControl.getAllClients();
                 break;
             case 5:
@@ -32,5 +34,14 @@ public class Main {
                 clientControl.getAllClients();
                 break;
         }
+
+        basketController.getAllBasket();
+        basketController.addBasket(1);
+        basketController.getAllBasket();
+        basketController.getBasket(1);
+        basketController.updateBasket(1,1);
+        basketController.getAllBasket();
+        basketController.deleteBasket(1);
+        basketController.getAllBasket();
     }
 }

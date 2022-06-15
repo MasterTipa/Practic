@@ -34,7 +34,6 @@ public class ClientControl {
             throwables.printStackTrace();
         }
     }
-
     public void addClient(String n, double m) throws SQLException {
         try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/registry", "root", "1234")){
             PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO clients(name, money) VALUES ('"+ n + "', '"+ m +"');");
@@ -43,7 +42,7 @@ public class ClientControl {
             throwables.printStackTrace();
         }
     }
-    public void uppdateClient(int id, double money) throws SQLException {
+    public void updateClient(int id, double money) throws SQLException {
         try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/registry", "root", "1234")){
             Statement statement = connection.createStatement();
             String updSql = "update clients set money='" +money+ "' WHERE id = '" + id + "';";
@@ -52,7 +51,6 @@ public class ClientControl {
             throwables.printStackTrace();
         }
     }
-
     public void deleteClient(String n) throws SQLException {
         try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/registry", "root", "1234")){
             Statement statement = connection.createStatement();
