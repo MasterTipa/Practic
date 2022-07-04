@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface DishRepository
-    extends JpaRepository<Dish, Integer> {
+    extends JpaRepository<Dish, Long> {
 }

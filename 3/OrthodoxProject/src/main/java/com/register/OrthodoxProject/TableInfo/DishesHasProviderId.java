@@ -9,27 +9,27 @@ import java.util.Objects;
 
 @Embeddable
 public class DishesHasProviderId implements Serializable {
-    private static final long serialVersionUID = -6573732666616859564L;
-    @Column(name = "dish_id", nullable = false)
-    private Long dishId;
+    private static final long serialVersionUID = -3576192633123803352L;
+    @Column(name = "dishid", nullable = false)
+    private Long dishid;
 
-    @Column(name = "provider_id", nullable = false)
-    private Long providerId;
+    @Column(name = "providerid", nullable = false)
+    private Long providerid;
 
-    public Long getDishId() {
-        return dishId;
+    public Long getDishid() {
+        return dishid;
     }
 
-    public void setDishId(Long dishId) {
-        this.dishId = dishId;
+    public void setDishid(Long dishid) {
+        this.dishid = dishid;
     }
 
-    public Long getProviderId() {
-        return providerId;
+    public Long getProviderid() {
+        return providerid;
     }
 
-    public void setProviderId(Long providerId) {
-        this.providerId = providerId;
+    public void setProviderid(Long providerid) {
+        this.providerid = providerid;
     }
 
     @Override
@@ -37,13 +37,13 @@ public class DishesHasProviderId implements Serializable {
         if (this == o) return true;
         if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
         DishesHasProviderId entity = (DishesHasProviderId) o;
-        return Objects.equals(this.providerId, entity.providerId) &&
-                Objects.equals(this.dishId, entity.dishId);
+        return Objects.equals(this.providerid, entity.providerid) &&
+                Objects.equals(this.dishid, entity.dishid);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(providerId, dishId);
+        return Objects.hash(providerid, dishid);
     }
 
 }

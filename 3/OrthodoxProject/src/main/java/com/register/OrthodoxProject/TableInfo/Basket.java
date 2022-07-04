@@ -10,10 +10,6 @@ public class Basket {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "order_id", nullable = false)
-    private Order order;
-
     public Long getId() {
         return id;
     }
@@ -22,12 +18,14 @@ public class Basket {
         this.id = id;
     }
 
-    public Order getOrder() {
-        return order;
-    }
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "order_id", nullable = false)
+    private Order order;
+
+    public Order getOrder(){return order;}
 
     public void setOrder(Order order) {
         this.order = order;
     }
-
+    //TODO [JPA Buddy] generate columns from DB
 }

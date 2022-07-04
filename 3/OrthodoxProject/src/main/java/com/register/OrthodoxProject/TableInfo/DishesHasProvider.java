@@ -8,15 +8,15 @@ public class DishesHasProvider {
     @EmbeddedId
     private DishesHasProviderId id;
 
-    @MapsId("dishId")
+    @MapsId("dishid")
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "dish_id", nullable = false)
-    private Dish dish;
+    @JoinColumn(name = "dishid", nullable = false)
+    private Dish dishid;
 
-    @MapsId("providerId")
+    @MapsId("providerid")
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "provider_id", nullable = false)
-    private Provider provider;
+    @JoinColumn(name = "providerid", nullable = false)
+    private Provider providerid;
 
     public DishesHasProviderId getId() {
         return id;
@@ -26,20 +26,20 @@ public class DishesHasProvider {
         this.id = id;
     }
 
-    public Dish getDish() {
-        return dish;
+    public Dish getDishid() {
+        return dishid;
     }
 
-    public void setDish(Dish dish) {
-        this.dish = dish;
+    public void setDishid(Dish dishid) {
+        this.dishid = dishid;
     }
 
-    public Provider getProvider() {
-        return provider;
+    public Provider getProviderid() {
+        return providerid;
     }
 
-    public void setProvider(Provider provider) {
-        this.provider = provider;
+    public void setProviderid(Provider providerid) {
+        this.providerid = providerid;
     }
 
 }

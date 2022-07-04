@@ -1,11 +1,15 @@
 package com.register.OrthodoxProject.TableInfo;
 
+import com.register.OrthodoxProject.TableInfo.Cafe;
+import com.register.OrthodoxProject.TableInfo.Client;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "orders")
 public class Order {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
 
